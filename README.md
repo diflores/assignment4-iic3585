@@ -8,7 +8,7 @@
 3. The app will be available at http://localhost:5000/public/
 
 ### Back-end:
-1. Use Python 3.8+
+1. Use Python 3.8+.
 2. Install poetry: `pip install poetry`.
 3. Install dependencies: `poetry install`.
 4. Run: `poetry run python app.py`. The back-end will be hosted at: http://127.0.0.1:8080/
