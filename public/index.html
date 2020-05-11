@@ -15,16 +15,19 @@
   <link rel="stylesheet" type="text/css" href="./style.css" media="all">
   <script src="https://www.gstatic.com/firebasejs/7.6.1/firebase.js"></script>
   <meta name="theme-color" content="#464048" />
+  <script src="https://kit.fontawesome.com/ecab1c0a7a.js" crossorigin="anonymous"></script>
   <script src="./init-firebase.js"></script>
 </head>
 
 <body>
-  <h1 class="vertical-container">Hello World</h1>
+  <h1 class="vertical-container">JSpotify</h1>
+  <p>Pick a song (press again to pause)!</p>
+  <ul id="song-list">
+  </ul>
   <script>
     if ("serviceWorker" in navigator) {
       navigator.serviceWorker.register("./service-worker.js")
         .then(function () {
-          console.log("Service Worker Registered");
         });
     }
   </script>
@@ -32,16 +35,15 @@
     const messaging = firebase.messaging();
     messaging.requestPermission()
       .then(function () {
-        console.log('Notification permission granted.');
         return messaging.getToken();
       })
       .then(function (token) {
-        console.log(token);
       })
       .catch(function (err) {
         console.log('Unable to get permission to notify.', err);
       })
   </script>
+  <script src="./index.js"></script>
 </body>
 
 </html>
