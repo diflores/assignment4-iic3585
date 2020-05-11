@@ -13,7 +13,7 @@ const config = {
 firebase.initializeApp(config);
 const messaging = firebase.messaging();
 messaging.setBackgroundMessageHandler(function (payload) {
-  const title = "Hello World";
+  const title = "JSpotify";
   const options = {
     body: payload.data.body
   };
