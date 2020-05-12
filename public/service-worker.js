@@ -4,7 +4,8 @@ const filesToCache = [
   "./",
   "./index.html",
   "./style.css",
-  "https://diflores.pythonanywhere.com/song_list"
+  "https://diflores.pythonanywhere.com/song_list",
+  "https://kit.fontawesome.com/ecab1c0a7a.js"
 ];
 self.addEventListener("install", function (e) {
   e.waitUntil(
