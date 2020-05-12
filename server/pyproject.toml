@@ -2,7 +2,7 @@
 name = "assignment4-iic3585-server"
 version = "0.1.0"
 description = ""
-authors = ["Daniela Flores <diflores@uc.cl>"]
+authors = ["Daniela Flores <diflores@uc.cl>", "Javiera Jorquera <jtjorquera@uc.cl>"]
 
 [tool.poetry.dependencies]
 python = "^3.7"
