@@ -14,3 +14,7 @@
 4. Run: `poetry run python app.py`. The back-end will be hosted at: http://127.0.0.1:8080/
 
 Note: Make sure to put some .mp3 files in `server/songs/` directory.
+
+## Live demo
+- Back-end: https://diflores.pythonanywhere.com/
+- PWA: https://jspotify-3aac1.web.app/

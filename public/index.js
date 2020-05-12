@@ -1,7 +1,7 @@
 const songList = document.getElementById("song-list");
 
 // Fetch Songs from local server
-fetch("http://127.0.0.1:8080/song_list")
+fetch("https://diflores.pythonanywhere.com/song_list")
   .then(response => {
     if (response.ok) {
       return response.json();
@@ -12,7 +12,7 @@ fetch("http://127.0.0.1:8080/song_list")
   .then(data => {
     data.forEach(song => {
       const li = document.createElement("li");
-      const songURL = `http://127.0.0.1:8080/songs/?song_name=${song}`;
+      const songURL = `https://diflores.pythonanywhere.com/songs/?song_name=${song}`;
       li.innerHTML = `<a data-song href="${songURL}">&#9654; Play ${song}</a> <i class="fas fa-heart to-be-saved" onclick="likeSong(event, '${songURL}')"></i>`;
 
       songList.appendChild(li);

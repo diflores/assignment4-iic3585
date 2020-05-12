@@ -1,6 +1,11 @@
 const cacheName = "pages-cache-v1";
 
-const filesToCache = ["./", "./index.html", "./style.css"];
+const filesToCache = [
+  "./",
+  "./index.html",
+  "./style.css",
+  "https://diflores.pythonanywhere.com/song_list"
+];
 self.addEventListener("install", function (e) {
   e.waitUntil(
     caches.open(cacheName).then(function (cache) {
