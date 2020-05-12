@@ -44,7 +44,6 @@ fetch("https://diflores.pythonanywhere.com/song_list")
     document.addEventListener(
       "click",
       function (event) {
-        console.log(event)
         // Ignore clicks on elements that aren't the song link
         if (!event.target.hasAttribute("data-song")) return;
 
@@ -67,9 +66,9 @@ fetch("https://diflores.pythonanywhere.com/song_list")
   });
 
 function likeSong(event, songURL) {
-  if (event.target.style.color !== "red") {
+  if (event.target.style.color !== "rgb(140, 36, 188)") {
     // Style heart
-    event.target.style.color = "red";
+    event.target.style.color = "#8C24BC";
     event.target.setAttribute("song-url", songURL);
     event.target.classList.add("to-be-saved");
     event.target.classList.add("saved");
@@ -79,7 +78,7 @@ function likeSong(event, songURL) {
     });
   } else {
     // Back to original style
-    event.target.style.color = "white";
+    event.target.style.color = "black";
     event.target.classList.remove("saved");
     event.target.classList.add("to-be-saved");
   }
