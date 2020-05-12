@@ -24,7 +24,6 @@ fetch("https://diflores.pythonanywhere.com/song_list")
     Array.prototype.forEach.call(
       document.querySelectorAll("[data-song]"),
       function (song) {
-        console.log(song);
         // Create a new Audio object for the song
         song.audio = new Audio(song.href);
 
