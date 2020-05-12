@@ -5,7 +5,7 @@ description = ""
 authors = ["Daniela Flores <diflores@uc.cl>"]
 
 [tool.poetry.dependencies]
-python = "^3.8"
+python = "^3.7"
 flask = "^1.1.2"
 flask-cors = "^3.0.8"
 
