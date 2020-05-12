@@ -1,7 +1,7 @@
 {
-  "name": "assignment1-iic3585",
+  "name": "assignment4-iic3585",
   "version": "0.1.0",
-  "description": "Third assignment of IIC3585 2020-1",
+  "description": "Fourth assignment of IIC3585 2020-1",
   "dependencies": {
     "firebase": "^7.14.3",
     "firebase-admin": "^8.12.1",

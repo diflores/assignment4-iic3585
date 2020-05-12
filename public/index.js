@@ -11,9 +11,17 @@ fetch("https://diflores.pythonanywhere.com/song_list")
   })
   .then(data => {
     data.forEach(song => {
+      const songName = song.slice(0, -4);
       const li = document.createElement("li");
       const songURL = `https://diflores.pythonanywhere.com/songs/?song_name=${song}`;
-      li.innerHTML = `<a data-song href="${songURL}">&#9654; Play ${song}</a> <i class="fas fa-heart to-be-saved" onclick="likeSong(event, '${songURL}')"></i>`;
+      li.innerHTML = `
+        <div class="song-container">
+          <a data-song href="${songURL}">
+            &#9654; ${songName}
+          </a>
+          <i class="fas fa-heart to-be-saved" onclick="likeSong(event, '${songURL}')"></i>
+        </div>
+      `;
 
       songList.appendChild(li);
     });
@@ -58,9 +66,9 @@ fetch("https://diflores.pythonanywhere.com/song_list")
   });
 
 function likeSong(event, songURL) {
-  if (event.target.style.color !== "red") {
+  if (event.target.style.color !== "rgb(140, 36, 188)") {
     // Style heart
-    event.target.style.color = "red";
+    event.target.style.color = "#8C24BC";
     event.target.setAttribute("song-url", songURL);
     event.target.classList.add("to-be-saved");
     event.target.classList.add("saved");
