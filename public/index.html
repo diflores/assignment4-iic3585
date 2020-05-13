@@ -27,7 +27,13 @@
   <script>
     if ("serviceWorker" in navigator) {
       navigator.serviceWorker.register("./service-worker.js")
-        .then(function () {
+        .then(function (registration) {
+          registration.onupdatefound = function () {
+            console.log("ServiceWorker update found.");
+            alert(
+              "A new version is available. Please close this browser tab or app window and re-open to update... "
+            );
+          }
         });
     }
   </script>
